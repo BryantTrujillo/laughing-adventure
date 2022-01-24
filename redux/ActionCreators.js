@@ -66,12 +66,12 @@ export const campsitesLoading = () => ({
 });
 
 export const campsitesFailed = (errMess) => ({
-  type: ActionTypes.COMMENTS_FAILED,
+  type: ActionTypes.CAMPSITES_FAILED,
   payload: errMess,
 });
 
 export const addCampsites = (campsites) => ({
-  type: ActionTypes.ADD_COMMMENTS,
+  type: ActionTypes.ADD_CAMPSITES,
   payload: campsites,
 });
 
