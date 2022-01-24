@@ -4,7 +4,7 @@ export const promotions = (
   state = { isLoading: true, errMess: null, promotions: [] },
   action
 ) => {
-  switch (action.payload) {
+  switch (action.type) {
     case ActionTypes.ADD_PROMOTIONS:
       return {
         ...state,
@@ -17,7 +17,7 @@ export const promotions = (
       return {
         ...state,
         isLoading: true,
-        errMess: false,
+        errMess: null,
         promotions: [],
       };
 
