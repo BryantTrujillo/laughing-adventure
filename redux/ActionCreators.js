@@ -1,5 +1,6 @@
 import * as ActionTypes from './ActionTypes';
 import { baseUrl } from '../shared/baseUrl';
+import { favorites } from './favorites';
 
 export const fetchComments = () => (dispatch) => {
   return fetch(baseUrl + 'comments')
@@ -160,6 +161,11 @@ export const postFavorite = (campsiteId) => (dispatch) => {
     dispatch(addFavorite(campsiteId));
   }, 2000);
 };
+
+export const addFavorite = (campsiteId) => ({
+  type: ActionTypes.ADD_FAVORITE,
+  payload: campsiteId,
+});
 
 export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
   const newComment = {
